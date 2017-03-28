@@ -46,6 +46,28 @@
      </div>
     <div class="col-md-9 ">
     Previous Accomodations:<br>
+    <h4>
+
+      {% for detail in data %}
+      Name:{{detail.name}}<br>
+      Gender:{{detail.Gender}}<br>
+      Relation:{{detail.relation}}<br>
+      Indate:{{detail.Indate}}<br>
+      Outdate:{{detail.Outdate}}<br>
+      Purpose:{{detail.purpose}}<br>
+      HostelAllotted:{{detail.hostelsavailable}}<br>
+      <br>
+      <br>
+      
+
+
+      {% endfor %}
+
+
+    </h4>
+
+
+    
     
     </div>
     </div>

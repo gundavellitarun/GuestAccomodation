@@ -18,8 +18,8 @@ def add_details(request):
         purpose = request.POST['purpose']
         hostels = request.POST['hostels']
         t1 = detail.objects.create(name=name,Gender=gender,age=age,Indate=indate,Outdate=outdate,relation=relation,purpose=purpose,hostelsavailable=hostels)
-        return render(request, 'guestdetails/homepage.html', {})
-    return render(request, 'guestdetails/details.html', {})
+        return render(request, 'guestdetails/home.html', {})
+
 
 
 
@@ -27,5 +27,12 @@ def intro(request):
     return render(request,'guestdetails/home.html')
 
 def homepage(request):
-    return render(request,'guestdetails/homepage.html')
+    data=detail.objects.all()
+
+    stu={
+        "data":data
+    }
+
+
+    return render(request,'guestdetails/homepage.html',stu)
 
